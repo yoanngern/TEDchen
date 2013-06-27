@@ -14,7 +14,7 @@ Smarty variables available:
                 </header>    
                 <p>
                  <!--ajouter le lien sur l'image-->
-                    <img src="/tedxEventManager/projet_mi//htdocs/img/layout/arrows/arrowRight.png" alt="Picture of a right arrow" />
+                    <img src="htdocs/img/layout/arrows/arrowRight.png" alt="Picture of a right arrow" />
                 </p>
             </article>
         </a>
