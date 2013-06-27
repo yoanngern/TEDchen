@@ -1,0 +1,2 @@
+{$gestionContactsNav}
+{$gestionContactsContent}

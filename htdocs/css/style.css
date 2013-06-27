@@ -1,0 +1,2400 @@
+/****************************************/
+/*Imports*/
+/****************************************/
+
+@import url(normalize.css);
+@import url(grid.css);
+
+/*End of imports*/
+
+
+/****************************************/
+/*Typography and CSS Base*/
+/****************************************/
+
+body{
+	font-family: helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	background-color: #ffffff;
+	text-rendering: optimizelegibility;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #c0c0c0;
+  text-decoration:none;
+}
+
+p{
+  margin: 0 0 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+}
+
+h1 {
+  font-size: 38.5px;
+  line-height: 40px;
+  
+}
+
+h2 {
+  font-size: 31.5px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 24.5px;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: 17.5px;
+  line-height: 20px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6 {
+  font-size: 11.9px;
+  line-height: 20px;
+}
+
+p, img, dl, ul, ol{
+margin:0 10px;
+}
+
+
+/*gestion_subnav*/
+.gestion_subnav .grey_bar{
+        background-color: #c0c0c0;
+        height: 100px;
+        margin-top:-50px;
+        left:-10%;
+        width:110%;
+        position:fixed;
+        transform:rotate(-1.3deg);
+        -ms-transform:rotate(-1.3deg); /* IE 9 */
+        -webkit-transform:rotate(-1.3deg); /* Safari and Chrome */           
+}
+
+.gestion_subnav{
+    width:100%;
+    z-index: 99;
+    position: fixed;
+    display:inline-block;
+    margin-top: 40px;
+    height: 0px;
+    margin-bottom:60px;
+}   
+
+.gestion_subnav h1{
+    color: #ffffff;
+    display:block;
+    position: relative;
+    float:left;
+    left:-110px;
+    top: -30px;
+    font-size: 4em;
+    text-transform:uppercase;
+}
+
+.gestion_subnav ul{
+    position: relative;
+    display:block;
+    transform:rotate(-1.3deg);
+    -ms-transform:rotate(-1.3deg); /* IE 9 */
+    -webkit-transform:rotate(-1.3deg); /* Safari and Chrome */
+    top:12px;
+}
+
+.gestion_subnav ul li{
+    display:block;
+    float:left;
+    margin-left: 20px;
+    text-align:center;
+
+}
+
+.gestion_subnav ul li a{
+    top:-4px;
+    display:block;
+    color:#ffffff;
+    font-size:2em;
+    border-bottom:4px solid #c0c0c0;
+    padding-bottom:5px;
+    text-decoration:none;
+    text-align:center;
+    
+}
+
+.gestion_subnav ul li a:hover{
+    border-bottom:4px solid #FF0000;  
+}
+
+
+/*end of gestion subnav*/
+
+
+/*forms*/
+
+form{
+    
+}
+
+label{ 
+}
+
+fieldset{
+    padding:20px;
+}
+
+legend, label{
+    width:35%;
+    border: none;
+    display: block;
+    display: inline-block;
+    float: left;
+    /*margin:0;
+    margin-bottom: 10px;*/
+    padding:0;
+    line-height: 30px;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+/*legend{
+    display:block;
+    width:100%;
+    margin-bottom:20px;
+    font-size:2em;
+    float:left;
+}*/
+
+input, textarea{
+    margin:0;
+
+    background-color:#eeeeee;
+    border:none;
+    width: 420px;
+    border:none;
+    position: relative;    
+}
+
+input{
+    margin:0;
+    padding-top:5px;
+    padding-bottom:5px;
+    display:block;
+    width: 65%;
+    float: right;
+    margin-bottom: 10px;
+}
+
+textarea{
+    
+    width:530px;
+    height:500px;
+    margin-top:20px;
+    margin-bottom:20px;
+    resize:none;
+    float: right;
+}
+
+input:focus, textarea:focus{
+}
+
+input[type="submit"]{
+    display: block;
+    background-color:rgba(255,0,0,1);
+    width:160px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:30px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+    border:2px solid #ff0000;
+    float: right;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top:-10px;
+}
+   
+input[type="submit"]:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+   }
+/*End of forms*/
+
+
+
+#container>article{
+    margin-top: 50px
+}
+
+
+
+
+
+/*Diverses*/
+#errormessage{
+       color:#ffffff;
+       font-size:3em;
+       position:fixed;
+       bottom:30px;
+       right:-10px;
+       background-color: rgb(255,0,0);
+       padding:20px; 
+       line-height:40px; 
+}
+
+.selected{
+    color:red;
+}
+
+.theButton{
+    display:block;
+    background-color:rgba(255,0,0,1);
+    width:160px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:30px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+    border:2px solid #ff0000;
+    float:right;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.theButton:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+   }
+
+.content gestion:first-child{
+    margin-top:130px;
+}
+
+/*End of diverses*/
+/*End of Typography and CSS Base*/
+
+
+/***************************************************************/
+/*Smartphones (portrait and landscape)*/
+/***************************************************************/
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+
+
+
+.social{
+   display:none;
+}
+
+    
+}
+
+
+/***************************************************************/
+/*Desktops and laptops*/
+/***************************************************************/
+/*Status = to fill*/
+
+@media only screen 
+and (min-width : 481px) {
+    
+
+/****************************************/
+/*about*/
+/****************************************/
+/*Status = done*/
+
+.about section{
+     margin-top:50px;
+}
+
+.about section article {
+    -moz-column-count:3; /* Firefox */
+    -webkit-column-count:3; /* Safari and Chrome */
+    column-count:3;
+    
+    -moz-column-gap:20px; /* Firefox */
+    -webkit-column-gap:20px; /* Safari and Chrome */
+    column-gap:20px;
+}
+
+.about section article p{
+    margin-bottom:20px;
+}
+.about section article a{
+    color:red;
+}
+
+.about section article a:hover{
+    color:#c0c0c0;
+}
+
+.about section img{
+    margin-top:40px; 
+    display:block;
+    margin-right:auto;
+    margin-left:auto; 
+}
+
+/*end of about*/
+
+
+/****************************************/
+/*about_nav*/
+/****************************************/
+/*Status = done*/
+/*Info: this template is styled by id="subnav"*/
+/*end of about_nav*/
+
+/****************************************/
+/*contact*/
+/****************************************/
+/*Status = ok*/
+
+.contact{
+    margin-top:40px;
+}
+
+.contact section{
+    display:inline-block;
+    position:relative;
+}
+
+.contact p {
+    margin-bottom:10px;
+}
+.contact p label{
+    width:30%;
+    display:block;
+}
+
+.contact p input{
+    width:65%;
+    display:block;
+}
+.contact input[type="submit"]{
+    margin-right: -20px;
+}
+
+.contact p textarea{
+    margin-top:15px;
+    resize:none;
+}
+
+.contact iframe{
+    margin-left:20px;
+}
+.contact section small a{
+    color:red;
+    text-decoration: none;
+}
+.contact .errorvalue{
+    color:red;
+    position:relative;
+    top:-12px;
+    left:190px;
+    clear:both;
+}
+/*end of contact*/
+
+
+/****************************************/
+/*contact_received*/
+/****************************************/
+/*Status = ok*/
+
+.contact_received p{
+    width:600px;
+    text-align:center;
+    height:auto;
+    position:relative;
+    top:100px;
+    background-color:#ff0000;
+    color:#ffffff;
+    margin-right:auto;
+    margin-left:auto;
+    font-size:2em;
+    padding:20px;
+    border-radius:2px;
+    border:2px solid #ff0000;
+    line-height:30px;
+}
+
+/*end of contact_received*/
+
+
+/****************************************/
+/*events*/
+/****************************************/
+/*Status = ok*/
+/*Info: this template is composed of two templates:
+        event_single.tpl
+        event_nav.tpl
+        
+each event has to be displayed inline and not in a row in this 
+particular events_list, so i'll specialized the class here
+*/
+.events{
+   height: 100%;
+}
+
+.events .events_single{
+    display:block;
+    float: left;
+}
+
+
+/*End of events*/ 
+
+
+/****************************************/
+/*events_nav*/
+/****************************************/
+/*Status = to fill*/
+
+
+.av{}
+.events_nav ul{}
+.events_nav li{}
+.events_nav a{}
+
+.events_nav{
+    display:block;
+    position:fixed;
+    bottom:50px;
+    width:100%;
+}
+
+.events_nav a{}
+
+.events_nav span{
+    display:none;
+}
+
+
+
+
+
+.events_nav .next{
+    background-image:url("../img/layout/arrows/arrowRight.png");
+    background-repeat:no-repeat;
+    background-position:right; 
+    display:block;
+    float:right;
+}
+
+.events_nav .next:hover{
+  background-image:url("../img/layout/arrows/arrowRightHover.png");
+  background-repeat:no-repeat;   
+  background-position:right;  
+}
+
+.events_nav .next h1{
+    display:block;
+    float:right;
+}
+
+.events_nav .next time{
+    display:block;
+    float:right;
+}
+
+
+
+
+
+
+
+.events_nav .previous{
+    background-image:url("../img/layout/arrows/arrowLeft.png");
+    background-repeat:no-repeat;
+    background-position:left;
+    float:left;    
+    position: relative;
+}
+
+.events_nav .previous:hover{
+  background-image:url("../img/layout/arrows/arrowLeftHover.png");
+  background-repeat:no-repeat;
+  background-position:left; 
+}
+.events_nav .previous h1{   
+
+     }
+     
+.events_nav .previous time{ 
+    
+     }
+    
+/*end of event_nav*/
+
+
+/****************************************/
+/*event_registration*/
+/****************************************/
+/*Status = il faut mettre des ronds plus petit pour le status d'inscription ou alors
+enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite du javascript'*/
+
+.events_registration{
+    margin-top:10px;
+}
+
+.events_registration header h1{
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+.events_registration header time{
+    display: block;
+    font-size:1.5em;
+    padding-left: 20px;
+}
+
+.events_registration header nav a{
+        display:block;
+        float:left;
+        background-image: url("../img/layout/circle.svg");
+        width:100px;
+        height:100px;
+}
+.events_registration header nav a span{
+        display:none;
+}
+.events_registration .buttonSave{
+    margin-bottom:40px;
+    margin-right:20px;
+    
+}
+.events_registration .errorvalue{
+    color:red;
+    position:relative;
+    top:-19px;
+    left:5px;
+    clear:both;
+}
+.events_registration .theButton{
+    margin: 30px;
+}
+
+
+.events_registration section form fieldset p textarea{
+    width:65%;
+    height:140px;
+}
+
+.events_registration section form fieldset p{
+    margin-bottom:10px;
+}
+.events_registration section form fieldset p label{
+    width:30%;
+    display:block;
+}
+
+.events_registration section form fieldset p input{
+    width:65%;
+    display:block;
+}
+
+/*end of event_registration*/
+
+
+/****************************************/
+/*events_single*/
+/****************************************/
+/*Status = il faut mettre le javascript ou alors faire enlever la bar de nav pour s'eviter de mettre le js*/
+
+.events_single{
+    margin-bottom:0px;
+    min-height:600px;
+}
+
+.events_single header{
+    display: block;
+    padding:20px;
+}
+
+.grey_bar{
+        background-color: #eeeeee;
+        height:200px;
+        margin-top:-110px;
+        width:120%;
+        left:-10%;
+        position:absolute;
+        z-index:-100;
+        transform:rotate(-3deg);
+        -ms-transform:rotate(-3deg); /* IE 9 */
+        -webkit-transform:rotate(-1.3deg); /* Safari and Chrome */           
+}
+
+/*
+.grey_bar2{
+     background-color:#ff0000;
+        height:5px;
+        margin-top:14px;
+        width:120%;
+        left:-10%;
+        position:absolute;
+        z-index:-100;
+        transform:rotate(-3deg);
+        -ms-transform:rotate(-3deg);
+        -webkit-transform:rotate(-1.3deg);  
+}
+*/
+
+.events_single header h1{
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+.events_single header time{
+    display: block;
+    font-size:1.5em;
+    padding-left: 20px;
+}
+
+.events_single nav{
+    display:block;
+    margin:0;
+    top:-8px;
+    width:100%;
+    position:relative;
+    left:50%;
+            transform:rotate(-3deg);
+        -ms-transform:rotate(-3deg); /* IE 9 */
+        -webkit-transform:rotate(-1.3deg); /* Safari and Chrome */ 
+    
+}
+.events_single nav ul{
+    position:relative;
+    left:-50%; 
+}
+.events_single nav ul li{
+    background-color:#ffffff;
+    display:block;
+    float:left;
+    margin:0px 20px 0px 65px;
+}
+
+.events_single nav ul li a:hover{
+    color:#c0c0c0;
+}
+
+.events_single nav ul li a{
+    display:block;   
+    color:rgba(255,0,0,1);
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    font-size:1.2em;
+    padding:5px;
+    padding-bottom:0;
+    margin-left:7px;
+    margin-right:7px;
+}
+
+#events_single_infos, #events_single_details, #events_single_speaker{}
+
+.events_single section{
+    margin-top:30px;
+}
+
+
+.events_single section section{
+    
+    position:relative;
+
+}
+.events_single section h2{
+    font-size:1.8em;
+}
+.events_single section p{}
+.events_single section dl{
+
+}
+.events_single section dl dt{
+    font-weight:normal;
+    display:block;
+    float:left;
+    width:100px;
+}
+.events_single section dl dt dd{}
+.events_single section ul{}
+.events_single section li{}
+
+.events_single .theButton{
+    display:block;
+    background-color:rgba(255,0,0,1);
+    width:160px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:30px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+    border:2px solid #ff0000;
+    position:absolute;
+    top:600px;
+    left:800px;
+    
+   }
+   
+.events_single .theButton:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+    
+   }
+
+/*end of events_single*/
+
+
+/****************************************/
+/*gestion_contacts*/
+/****************************************/
+/*Status = ok*/
+/*Info: this template is composed of multiple templates
+        depending of the user action:
+        gestion_contacts_infos.tpl
+        gestion_contacts_list.tpl
+        gestion_contacts_nav.tpl
+        gestion_contacts_new.tpl
+        gestion_contacts_role.tpl
+        gestion_contacts_role_infos.tpl
+*/
+/*end of gestion_contacts*/
+
+
+/****************************************/
+/*gestion_contacts_infos*/
+/****************************************/
+/*Status = aligner les form*/
+
+.gestion_contacts_infos .buttonSave{
+    display:inline-block;
+    width:160px;
+    margin-top: -50px;
+}
+
+.gestion_contacts_infos form{
+    margin-top:20px;
+}
+
+.gestion_contacts_infos form p label{
+    font-size:1em;
+    width:25%;
+}
+
+.gestion_contacts_infos form p input{
+    float:right;
+    width:70%;
+}
+
+.gestion_contacts_infos form p textarea{
+    float:right;
+    width:70%;
+    height:300px;
+    margin-top:2px;
+}
+
+.gestion_contacts_infos form legend{ 
+    margin-top:25px;
+    font-size:2em;
+    font-weight:bold;
+}
+
+.gestion_contacts_infos table{
+    width:100%;
+}
+
+.gestion_contacts_infos table tr{
+    border:2px solid #E0E0E0;
+}
+
+.gestion_contacts_infos form table tr th{
+    font-weight:bold;
+    font-size:1.2em;
+    background-color:#E0E0E0;
+}
+
+.gestion_contacts_infos form table tr td{
+    font-size:1.2em;
+}
+
+
+.gestion_contacts_infos form fieldset legend{
+    font-size:2em;
+    font-weight:bold;
+}
+
+.gestion_contacts_infos form fieldset p{
+    font-size:1.2em;
+}
+
+.gestion_contacts_infos form fieldset ul{
+    list-style-type: none;
+}
+
+
+/*end of gestion_contacts_infos*/
+
+
+/****************************************/
+/*gestion_contacts_list*/
+/****************************************/
+/*Status = ok, il y a quelques lignes vides bizarre mais ça le fait*/
+
+.gestion_contacts_list table{
+    margin-top: 140px;
+    width:100%;
+}
+
+.gestion_contacts_list table tr{
+    border-bottom:5px solid white;
+    margin:10px;
+    font-size:1.2em;
+}
+
+.gestion_contacts_list table tr th{
+    font-weight:bold;
+    font-size:1em; 
+    background-color:#C0C0C0;
+    padding:16px;
+    border-bottom:3px solid white;
+}
+
+.gestion_contacts_list table tr td{
+    padding:7px 7px 7px 16px;
+    background-color:#EFEFEF;
+}
+
+.gestion_contacts_list table tr td a{
+    width:300%;
+    height:100%;
+    display:block;
+    color:#000000;
+}  
+
+.gestion_contacts_list table tr:hover>td{
+    background-color:#E0E0E0;
+}
+
+
+/*end of gestion_contacts_list*/
+
+
+/****************************************/
+/*gestion_contacts_nav*/
+/****************************************/
+/*Status = ok*/
+
+.gestion_contacts_nav ul{
+    position:relative;
+    top:0;
+}
+
+/*end of gestion_contacts_nav*/
+
+
+/****************************************/
+/*gestion_contacts_new*/
+/****************************************/
+/*Status = il faut aligner les forms selon la meme structure que 
+gestion_contacts_infos. Une fois gesiton_contacts_infos fini, cette page devrait
+etre bonne aussi.*/
+
+.gestion_contacts_new .buttonSave{
+    display:inline-block;
+    width:160px;
+    margin-top: -50px;
+}
+.gestion_contacts_new form {
+    margin-top:50px;
+}
+
+.gestion_contacts_new form fieldset legend{
+    font-size:2em;
+    font-weight:bold;
+}
+
+.gestion_contacts_new form fieldset p label{
+    font-size:1.2em;
+    width:25%;
+}
+
+.gestion_contacts_new form fieldset p input{
+    float:right;
+    width:70%;
+}
+
+.gestion_contacts_new form fieldset p textarea{
+    float:right;
+    width:70%;
+    height:300px;
+    margin-top:2px;
+}
+
+.gestion_contacts_new form fieldset ul{
+    list-style-type: none;
+    
+}
+.gestion_contacts_new .errorvalue{
+    color:red;
+    position:relative;
+    top:-10px;
+    left:160px;
+    clear:both;
+}
+
+
+/*end of gestion_contacts_new*/
+
+
+/****************************************/
+/*gestion_contacts_role*/
+/****************************************/
+/*Status = to fill*/
+
+.gestion_contacts_role{
+    position: relative;
+    
+    
+}
+
+.gestion_contacts_role section{
+    margin-top:140px;
+}
+
+.gestion_contacts_role h1{
+    margin-top:25px;
+    width:110%;
+}
+
+.gestion_contacts_role ul{
+    margin-top:25px;
+    list-style-type: none;
+}
+
+.gestion_contacts_role ul li{
+    margin-top:5px;
+}
+
+.gestion_contacts_role .buttonRole{
+    display:block;
+    background-color:rgba(255,0,0,1);
+    width:160px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:40px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+   }
+   
+.gestion_contacts_role .buttonRole:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+   }
+
+/*end of gestion_contacts_role*/
+
+
+/****************************************/
+/*gestion_contacts_role_infos*/
+/****************************************/
+/*Status = to fill*/
+
+.gestion_contacts_role_infos{
+    width:470px;
+}
+
+.gestion_contacts_role_infos .buttonRoleInfos{
+    display:block;
+    background-color:rgba(255,0,0,1);
+    width:160px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+    margin-top:-20px;
+   }
+   
+.gestion_contacts_role_infos .buttonRoleInfos:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+}
+
+.gestion_contacts_role_infos form{
+    margin-left:30%;
+    
+}
+
+.gestion_contacts_role_infos form h1{
+    margin-top:45px;
+}
+
+.gestion_contacts_role_infos form p{
+    width:130%;
+}
+
+.gestion_contacts_role_infos form p label{
+    width:10%;
+}
+.gestion_contacts_role_infos form p input{
+    width:80%;
+}
+
+/*end of gestion_contacts_role_infos*/
+
+
+/****************************************/
+/*gestion_events*/
+/****************************************/
+/*Status = ok*/
+/*Info: this template is composed of different templates:
+        gestion_events_nav.tpl
+        gestion_events_single.tpl
+        and all gestion_events_xxx.tpl
+*/
+/*End of gestion_events*/ 
+
+
+/****************************************/
+/*gestion_events_list*/
+/****************************************/
+/*Status = ok*/
+
+.gestion_events_list{}
+
+.gestion_events_list a:first-child{
+    margin-top:130px;
+}
+
+.gestion_events_list a{
+    margin-top:35px;
+    display:inline-block;
+    width:100%;
+}
+
+.gestion_events_list a:hover .grey_bar{
+    background-color:#cccccc;
+}
+
+.gestion_events_list a:hover p img{
+    background-color:#cccccc;
+}
+
+.gestion_events_list a:hover h1, .gestion_events_list a:hover time{
+    color:white;
+}
+
+.gestion_events_list a .grey_bar{
+        background-color:#eeeeee;
+        position: absolute;
+        height:100px;
+        margin:0;
+        margin-top: -16px;
+}
+
+.gestion_events_list a .grey_bar:hover{
+        background-color:#eeeeee;
+}
+
+.gestion_events_list a article header{
+    display:block;
+    float:left;    
+    width:80%;
+
+}
+
+.gestion_events_list a article header h1{
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+.gestion_events_list a article header time{
+    display: block;
+    font-size:1.5em;
+    padding-left: 20px;
+}
+
+.gestion_events_list a article p{
+    display:block;
+    float:right;
+    position:relative;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.gestion_events_list a article p img{
+    height:50px; 
+    position:relative;
+    top:-8px;  
+}
+
+/*end of gestion_events_list*/
+
+
+/****************************************/
+/*gestion_events_mail*/
+/****************************************/
+/*Status = c'est presque bon, il faut juste mettre un peu moins d'espace entre 
+chaque participants dans la list et un peu styler les status (accepted, pending,...)
+*/
+
+.gestion_events_mail{}
+
+.gestion_events_mail section:first-child{
+    margin-top:50px;    
+}
+
+.gestion_events_mail_nav{
+    width:100%;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.gestion_events_mail section ul{
+    display:inline-block;
+    width:100%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    line-height: 20px;
+}
+.gestion_events_mail section ul li{
+    display:block;
+    background-color:#eeeeee;
+
+    padding:5px;
+}
+.gestion_events_mail section ul li div{
+    float:right;
+    font-weight:bold;
+}
+.gestion_events_mail section nav a{
+    display:inline-block;   
+    color:rgba(255,0,0,1);
+    text-decoration:none;
+    text-align:center;
+    font-size:1.8em;
+    padding:5px;
+    padding-bottom:0;
+    
+}
+.gestion_events_mail section nav a:hover{
+    color:#c0c0c0;
+    
+}
+.gestion_events_mail .scroll{
+    overflow-y:scroll;
+    height:400px;
+    margin-top:55px;
+}
+.gestion_events_mail section ul li a{}
+.gestion_events_mail #refused{}
+.gestion_events_mail #refused ul{}
+.gestion_events_mail #refused ul li{}
+.gestion_events_mail #refused ul li a{}
+.gestion_events_mail #waiting{}
+.gestion_events_mail #waiting ul{}
+.gestion_events_mail #waiting ul li{}
+.gestion_events_mail #waiting ul li a{}
+.gestion_events_mail #accepted{}
+.gestion_events_mail #accepted ul{}
+.gestion_events_mail #accepted ul li{}
+.gestion_events_mail #accepted ul li a{}
+
+/*end of gestion_events_mail*/
+
+
+/****************************************/
+/*gestion_events_mail_edit*/
+/****************************************/
+/*Status = il faut un tout petit peu realigner le boutton mais si
+on laisse comme ça ce n'est pas si grave*/
+
+.gestion_events_mail_edit{
+    margin-top:115px;
+}
+
+.gestion_events_mail_edit input{}
+
+.gestion_events_mail_edit fieldset{
+    margin-top:10px;
+    display:inline-block;
+}
+.gestion_events_mail_edit fieldset label{
+    float:left;
+    width:30%;
+    }
+.gestion_events_mail_edit fieldset input{
+   float:right; 
+   line-height:30px;
+   width:70%;
+}
+.gestion_events_mail_edit fieldset select{
+    width:100%;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-bottom:20px;
+}
+.gestion_events_mail_edit fieldset select option{}
+.gestion_events_mail_edit fieldset textarea{}
+
+
+/*end of gestion_events_mail_edit*/
+
+
+/****************************************/
+/*gestion_events_motivation*/
+/****************************************/
+/*Status = to fill*/
+
+.gestion_events_motivation{
+    margin-top:30px;
+}
+.gestion_events_motivation section h1{
+    font-size:2em;
+}
+.gestion_events_motivation section h2{
+    font-size:1.3em;
+    margin-bottom:-5px;
+}
+
+.gestion_events_motivation p{
+    margin-left:0px;
+    line-height:18px;
+    margin-bottom:15px;
+    line-height:15px;
+}
+
+.gestion_events_motivation section:first-child{
+    margin-top:120px;
+}
+
+.gestion_events_motivation section{
+    margin:10px;
+    background-color:#eeeeee;
+}
+.gestion_events_motivation section ul{
+    margin:10px 0;
+    list-style-type: none;
+    margin-right:40px;
+}
+.gestion_events_motivation section ul li{
+    float:right;
+}
+
+.gestion_events_motivation section ul .accept{
+    background-image: url("../img/layout/registrationStatus/accept.svg");
+    cursor:pointer;
+    width:31px;
+    height:31px;
+}
+
+.gestion_events_motivation section ul .accept:hover{
+    background-image: url("../img/layout/registrationStatus/acceptHover.svg");
+    cursor:pointer;
+    width:31px;
+    height:31px;
+}
+
+.gestion_events_motivation section ul .wait{
+    background-image: url("../img/layout/registrationStatus/wait.svg");
+    cursor:pointer;
+    width:31px;
+    height:31px;
+}
+
+.gestion_events_motivation section ul .wait:hover{
+    background-image: url("../img/layout/registrationStatus/waitHover.svg");
+    cursor:pointer;
+    width:31px;
+    height:31px;
+}
+
+.gestion_events_motivation section ul .refuse{
+    background-image: url("../img/layout/registrationStatus/refuse.svg");
+    cursor:pointer;
+    width:32px;
+    height:32px;
+}
+
+.gestion_events_motivation section ul .refuse:hover{
+    background-image: url("../img/layout/registrationStatus/refuseHover.svg");
+    cursor:pointer;
+    width:32px;
+    height:32px;
+}
+    
+/*end of gestion_events_motivation*/
+
+
+/****************************************/
+/*gestion_events_nav*/
+/****************************************/
+/*Status = ok, stylé par gestion_subnav*/
+
+.gestion_events_nav{}
+
+.gestion_events_nav h1{}
+.gestion_events_nav ul{}
+.gestion_events_nav ul li{}
+.gestion_events_nav ul a{
+    position: relative;
+    top: -10px;
+}
+
+/*end of gestion_events_nav*/
+
+
+/****************************************/
+/*gestion_events_role*/
+/****************************************/
+/*Status = done*/
+
+.gestion_events_role div:first-child{
+    margin-top:120px;
+}
+
+.gestion_events_role .theButton {
+    display:inline-block;
+    width:160px;
+    float:right;
+}
+
+.gestion_events_role dl{
+    display:inline-block;
+    width:100%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding:0;
+    line-height: 20px;
+}
+
+.gestion_events_role dl dt{
+    display:block;
+    background-color:#eeeeee;
+    margin:0px 0;
+    padding:5px;
+}
+
+.gestion_events_role .scroll{
+    overflow-y:scroll;
+    height:400px;
+    margin-top:55px;
+}
+
+
+
+/*end of gestion_events_role*/
+
+
+/****************************************/
+/*gestion_events_role_infos*/
+/****************************************/
+/*Status = to fill, prob bd avec yoann, il y a des erreurs php*/
+
+.gestion_events_role_infos {
+    float:right;
+}
+
+.gestion_events_role_infos .errorvalue{
+    color:red;
+    position:relative;
+    top:-19px;
+    left:5px;
+    clear:both;
+}
+.gestion_events_role_infos form input{
+    width:55%;
+    
+}
+.gestion_events_role_infos select{
+    float:right;
+    width:100%;
+    margin-bottom:20px;
+}
+
+
+
+
+/*end of gestion_events_role_infos*/
+
+
+/****************************************/
+/*gestion_events_single*/
+/****************************************/
+/*Status = pas loin d'etre bon, il faut aligner les boutons et 
+styler les bouttons next et précédents, initialement nous voulions 
+mettre ça dans du javascript.... si on enleve ces bouttons, pas besoin de js'*/
+
+
+.gestion_events_single form:first-child{
+    margin-top:120px;
+}
+
+/*nav*/
+.gestion_events_single nav{
+    display:inline-block;
+    margin-bottom:20px;
+    margin-top:20px;
+    position:relative;
+    left:0%;
+}
+.gestion_events_single nav ul {}
+.gestion_events_single nav ul li{
+    display:block;
+    float:left;
+}
+.gestion_events_single nav ul li a{ 
+    display:block;   
+    color:rgba(255,0,0,1);
+    text-decoration:none;
+    text-align:center;
+    font-size:1.8em;
+    padding:5px;
+    padding-bottom:0;
+}
+.gestion_events_single nav ul li a:hover{
+    color:#c0c0c0;
+}
+/*end of nav*/
+
+.gestion_events_single form input{}
+
+/*gestion_events_single_infos*/
+.gestion_events_single form #gestion_events_single_infos{}
+.gestion_events_single form #gestion_events_single_infos legend{
+    display:inline-block;
+    float:left;
+    width:30%;
+    font-size:1.5em;
+}
+.gestion_events_single form #gestion_events_single_infos input{
+    display:block;
+    float:left;
+    width:38%;
+}
+.gestion_events_single form #gestion_events_single_infos #troll{
+    float:left;
+    width:100%;
+}
+.gestion_events_single form #gestion_events_single_infos textarea{
+    margin-top:0px;
+    width:38%;
+    float:left;
+    height:240px;
+}
+.gestion_events_single form table tr td{
+    width:200px;
+    float:left;
+    margin-right:-90px;
+}
+.gestion_events_single form div input{
+    margin-right:0px;
+}
+.gestion_events_single legend{
+    margin-left:375px;
+    margin-right:-100px
+    
+}
+.gestion_events_single form fieldset p input{
+    width:10%;
+    display: inline-block;
+    float:left;
+    margin-left:10px;
+    margin-top:-10px;  
+}
+.gestion_events_single form fieldset select{
+    width:20%;
+    display: inline-block;
+    float:left;
+    margin-left:10px;   
+}
+.gestion_events_single .errorvalue{
+    color:red;
+    position:relative;
+    top:-20px;
+    right:-600px;
+    clear:both;
+}
+.gestion_events_single td p.errorvalue{
+    color:red;
+    position:relative;
+    top:0px;
+    right:40px;
+    clear:both;
+}
+.gestion_events_single form #gestion_events_single_infos legend table{}
+.gestion_events_single form #gestion_events_single_infos legend table tr{}
+.gestion_events_single form #gestion_events_single_infos legend table td{}
+.gestion_events_single form #gestion_events_single_infos legend table td select{}
+.gestion_events_single form #gestion_events_single_infos legend table td select option{}
+.gestion_events_single form #gestion_events_single_infos a{}
+/*end of gestion_events_single_infos*/
+
+.gestion_events_single form #gestion_events_single_details{}
+.gestion_events_single form #gestion_events_single_details fieldset{}
+.gestion_events_single form #gestion_events_single_details fieldset legend{}
+.gestion_events_single form #gestion_events_single_details fieldset select{}
+.gestion_events_single form #gestion_events_single_details fieldset select option{}
+.gestion_events_single form #gestion_events_single_details fieldset textarea{}
+.gestion_events_single form #gestion_events_single_details fieldset a{}
+
+.gestion_events_single form #gestion_events_single_speaker{}
+.gestion_events_single form #gestion_events_single_speaker legend{}
+.gestion_events_single form #gestion_events_single_speaker a{}
+.gestion_events_single form #gestion_events_single_speaker a input{}
+.gestion_events_single form #gestion_events_single_speaker p{}
+.gestion_events_single form #gestion_events_single_speaker p select{}
+.gestion_events_single form #gestion_events_single_speaker p select option{}
+.gestion_events_single form #gestion_events_single_speaker input{}
+
+.gestion_events_single form #gestion_events_single_team{}
+.gestion_events_single form #gestion_events_single_team legend{}
+.gestion_events_single form #gestion_events_single_team p{}
+.gestion_events_single form #gestion_events_single_team p select{}
+.gestion_events_single form #gestion_events_single_team p select option{}
+.gestion_events_single form #gestion_events_single_team p input{}
+.gestion_events_single form #gestion_events_single_team input{}
+.gestion_events_single form #gestion_events_single_team a{}
+
+/*end of gestion_events_single*/
+
+
+/****************************************/
+/*gestion_events_speaker_infos*/
+/****************************************/
+/*Status = Cette fonction va-t-elle etre ^vraiment implémentée??*/
+
+.gestion_events_speaker_infos{}
+
+.gestion_events_speaker_infos fieldset{}
+.gestion_events_speaker_infos fieldset input{}
+.gestion_events_speaker_infos fieldset textarea{}
+.gestion_events_speaker_infos fieldset legend{}
+.gestion_events_speaker_infos fieldset input{}
+.gestion_events_speaker_infos input{}
+
+/*end of gestion_events_speaker_infos*/
+
+/****************************************/
+/*gestion_locations*/
+/****************************************/
+/*Status = ok*/
+/*Info: this template is composed of multiple templates
+        depending of the user action:
+        gestion_locations_infos.tpl
+        gestion_locations_nav.tpl
+        gestion_locations_list.tpl
+        
+/*end of gestion_locations*/
+
+/****************************************/
+/*gestion_locations_infos*/
+/****************************************/
+/*Status = ok*/
+
+
+.gestion_locations_infos .errorvalue{
+    color:red;
+    position:relative;
+    top:-10px;
+    left:155px;
+    clear:both;
+}
+.gestion_locations_infos {
+    float:right;
+}
+.gestion_locations_infos form {
+}
+.gestion_locations_infos form p{
+    width:100%;
+    float:right;
+}
+.gestion_locations_infos form p label{
+    line-height:30px;
+}
+
+/*end of gestion_locations_infos*/
+
+
+/****************************************/
+/*gestion_locations_list*/
+/****************************************/
+/*Status = ok*/
+
+.gestion_locations_list div{
+    margin-top:120px;
+}
+
+.gestion_locations_list .theButton {
+    display:inline-block;
+    width:160px;
+    float:right;
+}
+.gestion_locations_list ul{
+    display:inline-block;
+    width:100%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    line-height: 20px;
+}
+.gestion_locations_list ul li{
+    display:block;
+    background-color:#eeeeee;
+    margin:10px 0;
+    padding:5px;
+}
+.gestion_locations_list ul li a{}
+
+.gestion_locations_list .scroll{
+    overflow-y:scroll;
+    height:400px;
+    margin-top:55px;
+}
+
+/*end of gestion_lcoations_list*/
+
+/****************************************/
+/*gestion_locations_nav*/
+/****************************************/
+/*Status = ok, stylé par gestion_subnav*/
+
+.gestion_locations_nav{}  
+
+.gestion_locations_nav h1{}
+
+/*end of gestion_locations_nav*/
+
+
+/****************************************/
+/*gestion_nav*/
+/****************************************/
+/*Status = ok*/
+/*Info: this template is styled by id="subnav"*/
+
+/*end of gestion_nav*/
+
+
+/****************************************/
+/*home*/
+/****************************************/
+/*Status = ok*/
+/*Info: this template is composed of multiple templates
+        depending of the user action:
+        events_single.tpl
+        viedeo_list.tpl
+*/
+/*end of gestion_nav*/
+
+
+/****************************************/
+/*login*/
+/****************************************/
+/*Status = petite modif d'alignement des bouttons à faire*/
+
+.login{
+    margin-top:50px;
+}
+
+.login section h1{
+    margin-bottom:25px;
+}
+
+.login .errorvalue{
+    color:red;
+    position:relative;
+    top:-5px;
+    left:165px;
+    clear:both;
+}
+
+.login .theButton{
+    display:block;
+    background-color:rgba(255,0,0,1);
+    width:148px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:30px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+    border:2px solid #ff0000;
+    float:right;  
+    margin-right: -30px;
+    margin-top: 20px;
+}
+
+.login .theButton:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+}
+
+.login .button_login{
+    margin-left: 40px;
+    margin-top: 20px;
+    width:160px;
+    height:44px;
+}
+
+.login section form fieldset p label{
+    width:35%;
+}
+.login section form fieldset p input{
+    width:67%;
+    margin:0px;
+    margin-top:-35px;
+}
+
+
+/*end of login*/
+
+/****************************************/
+/*main*/
+/****************************************/
+/*Status = ok*/
+#container{
+    max-width:1200px;
+    margin-right:auto;
+    margin-left:auto; 
+}
+
+#globalheader{
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100px;
+    padding-bottom:10px;
+    z-index:100; 
+     
+}
+
+#topheader{
+   background-color:white;
+   height: 30px;
+   width:100%;
+   position: fixed;
+   margin:0 auto;
+   padding-bottom:2px;
+   border-bottom: 2px solid #cccccc;
+}
+
+#globalnav, #lognav{
+    margin:0;
+    padding:0;
+    max-width:1200px;
+}
+
+#globalnav{
+    padding-left:17%;
+    position:relative;
+    display:block;
+    width:auto;
+    float:left;
+}
+
+#lognav{
+    position:fixed;
+    top:0;
+    left:74.5%; 
+    width:180px;
+    height:10px; 
+    float:right;  
+    display:block;
+}
+
+#globalnav li, #lognav li{
+    display:block;    
+    float: left;
+    height:40px;
+}
+
+#globalnav li a, #lognav li a{
+    font-size:1.5em;
+    display:block;
+    padding:0 10px;
+    padding-top:3px;
+    color:black;
+    height:25px;
+    color:#222222;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    border-top:4px solid #EEE;
+}
+
+
+#globalnav li a:hover, #lognav li a:hover{
+    border-top:4px solid #FF0000; 
+    text-decoration:none; 
+    height:25px;
+}
+
+#logout{}
+#userinfo{}
+#login{}
+
+#bottomheader{
+    position:absolute;
+    display:inline-block;    
+    left:50%;
+    top:30px;
+}
+#bottomheader a{
+    margin-top:20px;
+}
+
+#logo {
+    position:fixed;
+    top:25px;
+    left:17%;
+    display:block;
+    width:305px;
+    height:55px;
+    background-image: url("../img/layout/logo.svg");
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.social{
+    position:fixed;
+    top:20px;
+    left:75.5%; 
+    width:150px;
+    height:10px;   
+    display:block;
+}
+.social li{
+    display:block;
+    float:left;
+
+}
+
+.social li a{
+    display:block;
+    background-repeat: no-repeat;
+    background-size:26px 26px;
+    width:30px;
+    height:30px;
+    
+}
+
+.social li a span{
+    display:none;
+    
+}
+
+.twitter{
+    background-image: url("../img/layout/social/normal/twitter.png");
+
+}
+.facebook{
+    background-image: url("../img/layout/social/normal/facebook.png");
+}
+.linkedin{
+    background-image: url("../img/layout/social/normal/linkedin.png");
+}
+.flickr{
+    background-image: url("../img/layout/social/normal/flickr.png");
+}
+.youtube{
+    background-image: url("../img/layout/social/normal/youtube.png");
+}
+
+.twitter:hover{
+    background-image: url("../img/layout/social/hover/twitterHover.png");
+}
+.facebook:hover{
+    background-image: url("../img/layout/social/hover/facebookHover.png");
+}
+.linkedin:hover{
+    background-image: url("../img/layout/social/hover/linkedinHover.png");
+}
+.flickr:hover{
+    background-image: url("../img/layout/social/hover/flickrHover.png");
+}
+.youtube:hover{
+    background-image: url("../img/layout/social/hover/youtubeHover.png");
+}
+
+#subnav{
+    position:relative;
+    display:inline-block;
+    left:-50%;
+    top:33px;
+}
+
+#subnav li{
+    display:block;
+    float:left;
+    padding-bottom:3px;
+}
+
+#subnav a{
+    display:block; 
+    color:#222222;
+    text-decoration:none;
+    font-weight:bold;
+    text-align:center;
+    font-size:1.3em;
+    padding:5px 5px 2px 5px;
+    border-bottom:4px solid #c0c0c0;
+}
+
+#subnav li:hover{
+    
+}
+
+#subnav a:hover{
+    border-bottom:4px solid #FF0000;  
+}
+
+#content{
+    margin-top:90px;
+    margin-bottom:60px;
+}
+
+#globalfooter{
+    left:0;
+    bottom:0;
+    position:fixed;
+    background-color: white;
+    border:0.5px solid #cccccc;
+    width: 100%;
+    height: 30px;
+}
+
+#globalfooter p {
+    border-top:1px solid #c0c0c0;
+    margin-top:5px;
+    font-style:italic;
+    vertical-align:middle;
+    text-align: center;
+    font-size:1.1em;
+}
+
+/*end of main*/
+
+
+/****************************************/
+/*partners*/
+/****************************************/
+/*Status = done*/
+
+.partners section h1{
+    margin-top:50px;
+}
+.partners section p{
+    text-align:justify;
+    margin-bottom:10px;
+}
+
+.partners section p a{
+    color: red;
+    text-decoration: none;
+}
+.partners section p a:hover{
+    color: #c0c0c0;
+    text-decoration:none;
+}
+
+.partners section article p{
+    text-align:justify;
+    margin-bottom:20px;
+}
+
+.partners section article p a{
+    color: red;
+    text-decoration: none;
+}
+.partners section article p a:hover{
+    color: #c0c0c0;
+    text-decoration:none;
+}
+
+.partners section section article img{
+    margin-bottom:10px;
+}
+#partners_tedxChange, #partners_tedxYear
+
+/*end of partners*/
+
+
+/****************************************/
+/*partners_nav*/
+/****************************************/
+/*Status = ok*/
+/*Info: this template is styled by id="subnav"*/
+/*end of partners_nav*/
+
+
+/****************************************/
+/*press*/
+/****************************************/
+/*Status = ok, très peu d'info mais bon, on est pas la pour faire les scirbes non plus :-) */
+
+.press{}
+.press section{}
+.press section h1{
+    margin-top:50px;
+}
+.press section p{
+     text-align:justify;
+    margin-bottom:10px;
+}
+
+/*end of press*/
+
+
+/****************************************/
+/*register*/
+/****************************************/
+/*Status = espacer le bouton register*/
+
+.register .errorvalue{
+    color:red;
+    position:relative;
+    top:-10px;
+    left:220px;
+    clear:both;
+}
+
+.register .buttonRegister{
+    display:inline-block;
+    width:160px;
+    margin-top: -80px;
+}
+
+.register{
+    margin-top:50px;
+}
+.register h1{
+    margin-bottom:40px;
+}
+
+.register form{}
+.register form p{}
+.register form p label{}
+.register form p input{}
+
+/*end of register*/
+
+
+/****************************************/
+/*user_infos*/
+/****************************************/
+/*Status = a aligner vite fait!*/
+
+.user_infos{
+    margin-top:50px;
+}
+
+.user_infos .errorvalue{
+    color:red;
+    position:relative;
+    top:-12px;
+    left:160px;
+    clear:both;
+}
+
+.user_infos section{
+   
+}
+.user_infos section form{
+    
+}
+.user_infos section form p{
+     
+}
+.user_infos section form p label{
+    font-size:1em;
+    width:100%;
+}
+.user_infos section form p input{
+    float:right;
+    width:70%;
+}
+
+.user_infos .buttonSaveModif{
+    display:block;
+    background-color:rgba(255,0,0,1);
+    width:200px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:30px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+    border:2px solid #ff0000;
+    float:right;
+    margin-bottom:0px;
+   }
+   
+.user_infos .buttonSaveModif:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+   }
+   
+.user_infos .buttonSavePwd{
+    display:block;
+    background-color:rgba(255,0,0,1);
+    width:220px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:30px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.3em; 
+    border:2px solid #ff0000;
+    float:right;
+   }
+   
+.user_infos .buttonSavePwd:hover{
+    color:#ff0000;
+    border:2px solid #ff0000;
+    background-color:white;
+   }
+
+.user_infos form p textarea{
+    float:right;
+    width:70%;
+    height:300px;
+    margin-top:2px;
+}
+
+/*end of user_infos*/
+
+
+/****************************************/
+/*video_player*/
+/****************************************/
+/*Status = mmmh*/
+
+.video_player .align_right{
+    float:right;
+    margin-top:-480px;
+    margin-left:890px;
+}
+
+.video_player .align_left{
+    margin-top:50px;
+    margin-left:20px;
+}
+
+.video_player h1{
+    font-size:1.3em;
+    line-height:22px;
+}
+
+.video_player .align_right p time{
+    font-size:1.2em;
+    font-weight:bold;
+}
+
+.video_player .align_right p{
+    font-size:1em;
+    margin-bottom:6px;
+    line-height:18px;
+    width:250px;
+}
+
+.video_player .align_right p span{
+    font-size:1.2em;
+    font-weight:bold;
+}
+
+/*end of video_player*/
+
+
+/****************************************/
+/*videos_all*/
+/****************************************/
+/*Status = to fill*/
+
+.videos_all{
+    margin-top:50px;
+}
+.videos_all section{
+    display:inline-block;
+}
+
+.videos_all section a h1{
+    font-size:1.3em;
+    margin-bottom:-5px;
+    margin-left:20px;
+}
+
+.videos_all section a time{
+    font-size:1.2em;
+    margin-left:20px;
+}
+
+.videos_all section a img{
+    height:180px;
+    width:320px;
+    margin-top:30px;
+}
+
+/*end of videos_all*/
+
+
+/****************************************/
+/*videos_event*/
+/****************************************/
+/*Status = to fill*/
+
+.videos_event{}
+.videos_event iframe{}
+
+/*end of videos_event*/
+
+
+/****************************************/
+/*videos_list*/
+/****************************************/
+/*Status = to fill*/
+
+.videos_list{  
+    position:relative;
+    left:50%;
+    width:auto;
+    transform:rotate(-3deg);
+    -ms-transform:rotate(-3deg); /* IE 9 */
+    -webkit-transform:rotate(-1.3deg); /* Safari and Chrome */  
+}
+    
+.videos_list .grey_bar_video{
+    background-color:#eeeeee;
+    position:absolute;
+    display:inline-block;
+    height:310px;
+    width:1000%;
+    left:-500%;
+    z-index:-100;   
+}
+
+.videos_list h1{
+     position:relative;
+     left:-50%;
+     display:block;
+     font-size:2em;
+     padding:0;
+     margin-bottom:0;
+}
+
+.videos_list nav{
+    display:block;
+    position:relative;
+}
+
+
+.videos_list ul{
+    display:block;
+    width:auto; 
+    position:relative;
+    left:-50%;
+}
+
+.videos_list ul li{
+    display:block;
+    float:left;
+    margin-top:10px;
+    margin-bottom:10px;
+    line-height:12px;
+    
+}
+
+.videos_list ul li a h1{
+    font-size:1.3em;
+    margin-left:150px;
+}
+
+.videos_list ul li a:hover h1{
+    font-size:1.3em;
+    color:#EE0000;
+    margin-left:150px;
+}
+
+.videos_list ul li a time{
+    font-size:1.2em;
+    margin-left:30px;
+}
+
+.videos_list ul li a:hover time{
+    font-size:1.2em;
+    margin-left:30px;
+    color:#EE0000;
+}
+
+
+/*end of videos_list*/
+
+
+/****************************************/
+/*videos_nav*/
+/****************************************/
+/*Status = to fill*/
+/*Info: this template is styled by id="subnav"*/
+
+/*end of videos_nav*/
+
+}
+/*End of Main layout*/   
+
+/*End of Desktops and laptops layout*/
+
+
+/***************************************************************/
+/*Printer layout*/
+/***************************************************************/
+
+@media print {
+  * {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+/*End of Printer layout*/
