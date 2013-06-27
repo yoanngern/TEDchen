@@ -1,5 +1,5 @@
 ========================================
-TEDx Event Manager - Project 143
+TEDx Event Manager - TEDchen
 ========================================
 
 Version   : 0.1
@@ -12,6 +12,7 @@ Authors   :
   - Miranda Martinet
   - Frédéric Montet
   - Louis Allemann
+  - Yoann Gern
 
 Help 
   - RSZ
@@ -25,13 +26,14 @@ Directories structure:
 
 htdocs/ (public)		
 	css/ (contains stylesheet)
+	font/ (CONTAINS Font)
 	js/ (contains javascript)
 	img/ (contains images and other graphic element)
 	index.php (principal application file)
 
 includes/ (private)
 	templates/ (contains HTML templates)
-	templates_c/ (contains HTML templates compiled by Smarty)
+	class/ (contains Object)
 
 config/ (private, contains configuration files)
 	config.php (contains all configurations)
