@@ -97,6 +97,7 @@ class TEDx {
         );
     }
 
+
     /**
      * Get the next event
      * @return object the next event
@@ -128,6 +129,7 @@ class TEDx {
         return $aValidNextEvent;
     }
 
+
     /**
      * Get the id of the object
      * @return int id of the next object
@@ -142,6 +144,7 @@ class TEDx {
         // Return the id from the _POST
         return $id;
     }
+
 
     /**
      * Check if the value have the correct type
@@ -204,7 +207,7 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Contact page
      * @param Array _POST
      * @return Array two arrays
      * 			The first contains the values ​​transmitted by _POST
@@ -225,7 +228,7 @@ class TEDx {
     
 
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Gestion contacts page
      * @param Array _POST
      * @return Array two arrays
      * 			The first contains the values ​​transmitted by _POST
@@ -251,8 +254,9 @@ class TEDx {
         return array($contact, $errorState);
     }
 
+
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Gestion contacts role page
      * @param Array _POST
      * @return Array two arrays
      * 			The first contains the values ​​transmitted by _POST
@@ -269,13 +273,13 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Registration to an Event page
      * @param Array _POST
      * @return Array two arrays
      *      The first contains the values ​​transmitted by _POST
      *      The second contains the state values ​​received by _POST
      */
-    protected function gestionRegistrationValidator($registration) {
+    protected function registrationValidator($registration) {
 
         // Validate all received values 
         $errorState['name']         = $this->validator(array('String', $registration['name']));
@@ -314,13 +318,13 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Register page
      * @param Array _POST
      * @return Array two arrays
      *      The first contains the values ​​transmitted by _POST
      *      The second contains the state values ​​received by _POST
      */
-    protected function gestionRegisterValidator($register) {
+    protected function registerValidator($register) {
 
         // Validate all received values 
         $errorState['name']         = $this->validator(array('String', $register['name']));
@@ -352,7 +356,7 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for User infos page (Edit profil)
      * @param Array _POST
      * @return Array two arrays
      *      The first contains the values ​​transmitted by _POST
@@ -376,7 +380,7 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for User infos page (Edit Password)
      * @param Array _POST
      * @return Array two arrays
      *      The first contains the values ​​transmitted by _POST
@@ -400,7 +404,7 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Login page
      * @param Array _POST
      * @return Array two arrays
      *      The first contains the values ​​transmitted by _POST
@@ -418,7 +422,7 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Gestion Event page
      * @param Array _POST
      * @return Array two arrays
      * 			The first contains the values ​​transmitted by _POST
@@ -449,7 +453,7 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Gestion speaker page
      * @param Array _POST
      * @return Array two arrays
      * 			The first contains the values ​​transmitted by _POST
@@ -471,7 +475,7 @@ class TEDx {
     
     
     /**
-     * Valid values ​​received by _POST
+     * Valid values ​​received by _POST for Gestion location page
      * @param Array _POST
      * @return Array two arrays
      *      The first contains the values ​​transmitted by _POST
@@ -491,7 +495,11 @@ class TEDx {
     }
     
     
-    
+    /**
+     * Create the URL of the Thumbnail video
+     * @param the ref of YouTube video
+     * @return URL of the image
+     */
     function createImgUrl($ref){
         //create the good image url
         $fullImgRef="http://img.youtube.com/vi/".$ref."/mqdefault.jpg";
@@ -500,15 +508,12 @@ class TEDx {
         return $fullImgRef;
     }
     
-    //create a youtube embed url from the ref
-    function createVideoUrl($ref){
-        //create the good video url
-        $fullVideoRef="http://www.youtube.com/embed/".$ref."?autoplay=1&fs=1&rel=0&enablejsapi=1&playerapiid=ytplayer";
-        
-        //return the array
-        return $fullVideoRef;
-    }
     
+    /**
+     * Create the ref of the YouTube video
+     * @param the URL of the video
+     * @return the ref of the video
+     */
     function getYoutubeRef($url){
         //break it at the = sign
         $url=explode("=",$url);
@@ -530,7 +535,12 @@ class TEDx {
         }
     }
     
-    //create a youtube embed url from the ref
+    
+    /**
+     * Create the iframe of the YouTube video
+     * @param the ref of the video
+     * @return the iframe
+     */
     function createIframe($ref){
         //create the good video url
         $fullVideoRef="<iframe width='853' height='480' src=\"http://www.youtube.com/embed/".$ref."?fs=1&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>";
@@ -564,6 +574,7 @@ class TEDx {
         return $this->smarty->fetch('home.tpl');
     }
 
+
     /**
      * Draw the About navigator
      * @return content HTML of the About navigator
@@ -583,6 +594,7 @@ class TEDx {
         // Draw About page
         return $this->smarty->fetch('about.tpl');
     }
+
 
     /**
      * Draw the Events page
@@ -616,6 +628,7 @@ class TEDx {
         // Return the content of Events page
         return $this->smarty->fetch('events.tpl');
     }
+
 
     /**
      * Draw the Event single page
@@ -706,6 +719,7 @@ class TEDx {
         }
     }
 
+
     /**
      * Draw the Events Registration page
      * @return content HTML of the Events Registration page
@@ -724,7 +738,7 @@ class TEDx {
             // Check if the form is done
             if (isset($_POST['update'])) {
             
-                list($registration, $errorState) = $this->gestionRegistrationValidator($_POST);
+                list($registration, $errorState) = $this->registrationValidator($_POST);
                 
                 // If all values are correct, continue
                 if (count(array_keys($errorState, true)) == count($errorState)) {
@@ -838,6 +852,7 @@ class TEDx {
         return $this->smarty->fetch('events_registration.tpl');
     }
     
+    
     /**
      * Draw the Events Registration Received page
      * @return content HTML of the Events Registration Received page
@@ -855,6 +870,7 @@ class TEDx {
         $this->displayMessage('This action is not yet implemented.');
         return null;
     }
+
 
     /**
      * Draw the Videos page
@@ -1084,6 +1100,7 @@ class TEDx {
         return $this->smarty->fetch('videos_event.tpl');
     }
 
+
     /**
      * Draw the Videos navigator
      * @return content HTML of the Videos navigator
@@ -1094,6 +1111,7 @@ class TEDx {
         return $this->smarty->fetch('videos_nav.tpl');
     }
 
+
     /**
      * Draw the Partners navigator
      * @return content HTML of the Partners navigator
@@ -1101,6 +1119,7 @@ class TEDx {
     protected function drawPartnersNav() {
         return $this->smarty->fetch('partners_nav.tpl');
     }
+
 
     /**
      * Draw the Partners page
@@ -1110,6 +1129,7 @@ class TEDx {
         return $this->smarty->fetch('partners.tpl');
     }
 
+
     /**
      * Draw the Press page
      * @return content HTML of the Press page
@@ -1117,6 +1137,7 @@ class TEDx {
     protected function drawPress() {
         return $this->smarty->fetch('press.tpl');
     }
+
 
     /**
      * Draw the Contact page
@@ -1151,6 +1172,7 @@ class TEDx {
         return $this->smarty->fetch('contact.tpl');
     }
 
+
     /**
      * Draw the Contact Received page
      * @return content HTML of the Contact Received page
@@ -1159,14 +1181,17 @@ class TEDx {
         return $this->smarty->fetch('contact_received.tpl');
     }
 
+
     /**
      * Draw Gestion navigator
+     * @param the sub action
      * @return content HTML of the Gestion navigator
      */
     protected function drawGestionNav($subAction) {
         $this->smarty->assign('subAction', $subAction);
         return $this->smarty->fetch('gestion_nav.tpl');
     }
+
 
     /**
      * Draw the Gestion page
@@ -1176,6 +1201,7 @@ class TEDx {
         $action = 'gestion_events';
         return $this->drawGestionEvents($action);
     }
+
 
     /**
      * Draw the Gestion Events page
@@ -1330,8 +1356,10 @@ class TEDx {
         return $this->smarty->fetch('gestion_events.tpl');
     }
 
+
     /**
      * Draw the Gestion Events Single page
+     * @param the id of the event
      * @return content HTML of the Gestion Events Single page
      */
     protected function drawGestionEventsSingle($id) {
@@ -1628,8 +1656,10 @@ class TEDx {
         return $this->smarty->fetch('gestion_events_single.tpl');
     }
 
+
     /**
      * Draw the Gestion Events Motivations page
+     * @param the action received by _POST
      * @return content HTML of the Gestion Events Motivations page
      */
     protected function drawGestionEventsMotivation($action){
@@ -1710,8 +1740,10 @@ class TEDx {
         return $this->smarty->fetch('gestion_events_motivation.tpl');
     }
 
+
     /**
      * Draw the Gestion Events Mail page
+     * @param the action received by _POST
      * @return content HTML of the Gestion Events Mail page
      */
     protected function drawGestionEventsMail($action) {
@@ -1791,6 +1823,7 @@ class TEDx {
 
     /**
      * Draw the Gestion Events Role page
+     * @param the action received by _POST
      * @return content HTML of the Gestion Events Role page
      */
     protected function drawGestionEventsRole($action) {
@@ -1994,6 +2027,7 @@ class TEDx {
 
     /**
      * Draw the Gestion Locations page
+     * @param the action received by _POST
      * @return content HTML of the Gestion Locations page
      */
     protected function drawGestionLocations($action) {
@@ -2128,8 +2162,10 @@ class TEDx {
         return $this->smarty->fetch('gestion_locations.tpl');
     }
 
+
     /**
      * Draw the Gestion Contacts page
+     * @the action received by _POST
      * @return content HTML of the Gestion Contacts page
      */
     protected function drawGestionContacts($action) {
@@ -2199,6 +2235,7 @@ class TEDx {
         return $this->smarty->fetch('gestion_contacts.tpl');
     }
 
+
     /**
      * Draw the Gestion Contacts List
      * @return content HTML of the Gestion Contacts List
@@ -2251,6 +2288,7 @@ class TEDx {
 
         return $this->smarty->fetch('gestion_contacts_list.tpl');
     }
+
 
     /**
      * Draw the Gestion Contacts Infos
@@ -2536,6 +2574,7 @@ class TEDx {
         return $this->smarty->fetch('gestion_contacts_infos.tpl');
     }
 
+
     /**
      * Draw the Gestion Contacts New page
      * @return content HTML of the Gestion Contacts New page
@@ -2601,6 +2640,7 @@ class TEDx {
         return $this->smarty->fetch('gestion_contacts_new.tpl');
     }
 
+
     /**
      * Draw the Gestion Contacts Role Infos
      * @return content HTML of the Gestion Contacts Role Infos
@@ -2628,6 +2668,7 @@ class TEDx {
 
         return $this->smarty->fetch('gestion_contacts_role.tpl');
     }
+
 
     /**
      * Draw the Gestion Contacts Role Infos
@@ -2703,6 +2744,7 @@ class TEDx {
         return $this->smarty->fetch('gestion_contacts_role.tpl');
     }
 
+
     /**
      * Draw the Gestion Contacts Role New
      * @return content HTML of the Gestion Contacts Role New
@@ -2734,6 +2776,7 @@ class TEDx {
 
     /**
      * Draw the Login page
+     * @param the action received by _POST
      * @return content HTML of the Login page
      */
     protected function drawLogin($action) {
@@ -2764,8 +2807,10 @@ class TEDx {
         return $this->smarty->fetch('login.tpl');
     }
 
+
     /**
      * Draw the User Infos page
+     * @param the action received by _POST
      * @return content HTML of the User Infos page
      */
     protected function drawUserInfos($action) {
@@ -2865,6 +2910,7 @@ class TEDx {
         return $this->smarty->fetch('user_infos.tpl');
     }
 
+
     /**
      * Draw the Register page
      * @return content HTML of the Register page
@@ -2873,7 +2919,7 @@ class TEDx {
     
         if (isset($_POST['update'])) {
 
-            list($register, $errorState) = $this->gestionRegisterValidator($_POST);
+            list($register, $errorState) = $this->registerValidator($_POST);
 
             // If all values are correct, continue
             if (count(array_keys($errorState, true)) == count($errorState)) {
@@ -2920,8 +2966,10 @@ class TEDx {
         return $this->smarty->fetch('register.tpl');
     }
 
+
     /**
      * Interprets the user action and returns the corresponding HTML
+     * @param the action received by _POST
      * @return string HTML corresponding to the action selected by the user
      */
     protected function getContent($action) {
@@ -3321,6 +3369,7 @@ class TEDx {
         // Return all variables
         return array($topAction, $subAction, $subnav, $content);
     }
+
 
     /**
      * Display IHM
