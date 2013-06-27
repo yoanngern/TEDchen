@@ -799,6 +799,10 @@ enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite d
 /****************************************/
 /*Status = aligner les form*/
 
+.gestion_contacts_infos{
+    margin-top:60px;
+}
+
 .gestion_contacts_infos .buttonSave{
     display:inline-block;
     width:160px;
@@ -806,7 +810,7 @@ enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite d
 }
 
 .gestion_contacts_infos form{
-    margin-top:20px;
+    margin-top:30px;
 }
 
 .gestion_contacts_infos form p label{
@@ -827,6 +831,8 @@ enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite d
 }
 
 .gestion_contacts_infos form legend{ 
+    display:block;
+    width:100%;
     margin-top:25px;
     font-size:2em;
     font-weight:bold;
@@ -850,6 +856,10 @@ enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite d
     font-size:1.2em;
 }
 
+.gestion_contacts_infos form fieldset:nth-child(2){
+    margin-top:80px;
+}
+
 
 .gestion_contacts_infos form fieldset legend{
     font-size:2em;
@@ -863,6 +873,7 @@ enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite d
 .gestion_contacts_infos form fieldset ul{
     list-style-type: none;
 }
+
 
 
 /*end of gestion_contacts_infos*/
