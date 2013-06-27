@@ -491,6 +491,7 @@ particular events_list, so i'll specialized the class here
     display:block;
     position:fixed;
     bottom:50px;
+    left: 0;
     width:100%;
 }
 
@@ -508,8 +509,6 @@ particular events_list, so i'll specialized the class here
     background-image:url("../img/layout/arrows/arrowRight.png");
     background-repeat:no-repeat;
     background-position:right; 
-    display:block;
-    float:right;
 }
 
 .events_nav .next:hover{
@@ -519,13 +518,11 @@ particular events_list, so i'll specialized the class here
 }
 
 .events_nav .next h1{
-    display:block;
-    float:right;
+
 }
 
 .events_nav .next time{
-    display:block;
-    float:right;
+
 }
 
 
@@ -942,6 +939,10 @@ enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite d
 /*Status = il faut aligner les forms selon la meme structure que 
 gestion_contacts_infos. Une fois gesiton_contacts_infos fini, cette page devrait
 etre bonne aussi.*/
+
+.gestion_contacts_new{
+    margin-top:120px;
+}
 
 .gestion_contacts_new .buttonSave{
     display:inline-block;
@@ -1399,7 +1400,11 @@ on laisse comme ça ce n'est pas si grave*/
 /*Status = done*/
 
 .gestion_events_role div:first-child{
-    margin-top:120px;
+    margin-top:140px;
+}
+
+.gestion_events_role div:nth-child(2){
+    margin-top:150px;
 }
 
 .gestion_events_role .theButton {
