@@ -1,6 +1,6 @@
 <nav class="events_nav">
- <a href="#" class="previous"><span>Previous</span></a>
- <a href="#" class="next"><span>Next</span></a>
+ <a href="#" class="previous span6"><span>Previous</span></a>
+ <a href="#" class="next span6"><span>Next</span></a>
  
         
             

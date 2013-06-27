@@ -122,11 +122,11 @@ Smarty variables available:
                 <h2>Slot {counter}</h2>
                 {if $slot.speakers != null}
                     <ul>
+                        {foreach from=$slot.speakers item=speaker}
                         <li>           
-                            {foreach from=$slot.speakers item=speaker}
-                                {if $speaker!=null}{$speaker->getName()}{/if}
-                            {/foreach}  
+                            {if $speaker!=null}{$speaker->getName()}{/if}
                         </li>
+                         {/foreach}  
                     </ul>
                 {/if}
             {/foreach}

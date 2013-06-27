@@ -39,7 +39,7 @@ $(document).ready(function(){
   
   
   
-  /**********************************************/
+/**********************************************/
 /* Animation event_single.tpl*/
 /* Changement des événements*/
 /**********************************************/
@@ -156,4 +156,127 @@ $(".events_nav .next").click(function(){
 
 
 /************************************************************/
+
+
+/**********************************************/
+/* Animation event_single.tpl*/
+/* changement de chiffre en mots*/
+/**********************************************/
+
+/**
+ * la fonction suivante change un nombre de 0 à 9 en mot de zero
+ * à nine
+ */
+
+var number = $("");
+
+function numberToWords(){
+    
+    switch (number)
+    {
+    case 0:
+      number = "zero";
+    break;
+    case 1:
+      number = "one";
+    break;
+    case 2:
+      number = "two";
+    break;
+    case 3:
+      number = "three";
+    break;
+    case 4:
+      number = "four";
+    break;
+    case 5:
+      number = "five";
+    break;
+    case 6:
+      number = "six";
+    break;
+    case 7:
+      number = "seven";
+    break;
+    case 8:
+      number = "height";
+    break;
+    case 9:
+      number = "nine";
+    break;
+    default:
+      
+    }
+    
+    return number;
+}
+
+
+
+/**********************************************/
+/* Animation event_registration.tpl*/
+/* Séquencement des formulaires d'enregistrement.
+/**********************************************/
+
+
+
+/**
+ * Initialisation des formulaires et boutons à afficher
+ */
+$("#event_user_infos").show();
+$("#event_user_details").hide();
+$("#event_user_adress").hide();
+$("#event_user_motivation").hide();
+$(".events_registration .buttonSave").hide();
+
+
+
+
+var compteurRegistration = 0;
+
+$(".events_registration .next").click(function(){
+    
+    for(compteurRegistration;compteurRegistration<3;compteurRegistration++){
+
+        switch(compteurRegistration){
+            case 0:
+            $("#event_user_infos").fadeOut(200).hide();
+            $("#event_user_details").delay(200).fadeIn();
+            $("#event_user_adress").hide();
+            $("#event_user_motivation").hide();
+            break;
+
+            case 1:
+            $("#event_user_infos").hide();
+            $("#event_user_details").fadeOut(200).hide();
+            $("#event_user_adress").delay(200).fadeIn();
+            $(".events_registration .next").delay(200).fadeIn(200);
+            $("#event_user_motivation").hide();
+            break;
+
+            case 2:
+            $("#event_user_infos").hide();
+            $("#event_user_details").hide();
+            $("#event_user_adress").fadeOut(200).hide();
+            $("#event_user_motivation").delay(200).fadeIn();
+            $(".events_registration .buttonSave").delay(200).fadeIn();
+            $(".events_registration .next").hide();
+            break;
+            }
+             if(compteurRegistration<2){
+                compteurRegistration++;
+                }else if(compteurRegistration==2){
+                 compteurRegistration=0;
+                }
+            return;
+            
+                
+          }
+
+     
+
+  
+});
+
+
 });

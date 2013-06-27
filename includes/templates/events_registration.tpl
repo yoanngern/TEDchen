@@ -100,7 +100,7 @@
             <!--end button-->
             
 <!--user adress tab-->
-            <fieldset id="adress">
+            <fieldset id="event_user_adress">
             <h3>Please give us your adress</h3>
                <!--user_street-->
                 <p>
@@ -160,6 +160,7 @@
             </fieldset>
     
             <p>
+                <a href="#" class="next theButton"><span>Next</span></a>
                 <input type="hidden" name="id" value="{$event->getNo()}" />
                 <input type="hidden" name="action" value="events_registration" />
                 <input class="buttonSave" type="submit" name="update" value="Save" />

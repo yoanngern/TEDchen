@@ -489,10 +489,9 @@ particular events_list, so i'll specialized the class here
 
 .events_nav{
     display:block;
-    position:fixed;
-    bottom:50px;
-    left: 0;
-    width:100%;
+    position:relative;
+    border-top:2px solid ;
+    
 }
 
 .events_nav a{}
@@ -508,21 +507,33 @@ particular events_list, so i'll specialized the class here
 .events_nav .next{
     background-image:url("../img/layout/arrows/arrowRight.png");
     background-repeat:no-repeat;
-    background-position:right; 
+    background-position:5% 10px; 
+    background-size:70px;
+    height:300px;
+    position:relative;
+    display:block;
+    top:0;
 }
 
 .events_nav .next:hover{
-  background-image:url("../img/layout/arrows/arrowRightHover.png");
-  background-repeat:no-repeat;   
-  background-position:right;  
+  background-image:url("../img/layout/arrows/arrowRightHover.png"); 
 }
 
 .events_nav .next h1{
-
+position:relative;
+left:100px;
+top:50px;
+text-align:left;
+width:100%;
 }
 
 .events_nav .next time{
-
+position:absolute;
+top:30px;
+left:120px;
+text-align:left;
+width:100%;
+font-size:1.4em;
 }
 
 
@@ -534,23 +545,32 @@ particular events_list, so i'll specialized the class here
 .events_nav .previous{
     background-image:url("../img/layout/arrows/arrowLeft.png");
     background-repeat:no-repeat;
-    background-position:left;
+    background-size:70px;
+    background-position:100% 10px;
+    height:300px;
     float:left;    
     position: relative;
 }
 
 .events_nav .previous:hover{
   background-image:url("../img/layout/arrows/arrowLeftHover.png");
-  background-repeat:no-repeat;
-  background-position:left; 
 }
 .events_nav .previous h1{   
-
+right:80px;
+top:50px;
+text-align:right;
+width:100%;
+position:relative;
      }
      
 .events_nav .previous time{ 
-    
-     }
+position:absolute;
+right:110px;
+top:30px;
+text-align:right;
+width:100%;
+font-size:1.4em;
+}
     
 /*end of event_nav*/
 
@@ -773,6 +793,45 @@ enlever ces etapes d'inscription pas nécéssairement utiles, ainsi on s'evite d
    }
 
 /*end of events_single*/
+
+
+/****************************************/
+/*events_single_speaker*/
+/****************************************/
+/*Status = ok*/
+
+.events_single_speakers section{
+    width:65%; 
+    
+}
+
+.events_single_speakers section h2{
+    font-size:1.5em;
+    margin-bottom:-5px;
+    width:100%;
+    display:block;
+}
+
+.events_single_speakers section ul{
+    text-decoration:none;
+    display:block;
+    width:100%;
+    float:left;
+    margin-bottom:20px;
+}
+
+.events_single_speakers section ul li{
+    display:block;
+    float:left;
+    background-color:#eeeeee;
+    padding:2px 7px;
+    margin:2px;
+    width:;
+}
+
+
+/*events_single_speaker*/
+
 
 
 /****************************************/
