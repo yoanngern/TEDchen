@@ -28,7 +28,7 @@ Smarty variables available:
                 <li>
                     <a href="?action=videos&eventId={$talk.talk->getEventNo()}&speakerId={$talk.talk->getSpeakerPersonNo()}">
                         <img src="{$talk.imgURL}" />
-                        <h1>{$talk.talk->getVideoTitle()}</h1>
+                        <h2>{$talk.talk->getVideoTitle()}</h2>
                         <time>{$talk.event->getStartingDate()|date_format:"%d %B %Y"}</time>
                     </a>
                 </li>
